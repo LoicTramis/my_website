@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE flux [
+	<!ELEMENT flux (depeche+)>
+	<!ELEMENT depeche (titre, soustitre?, date?, contenu+)>
+	<!ELEMENT titre (#PCDATA)>
+	<!ELEMENT soustitre (#PCDATA)>
+	<!ELEMENT date (#PCDATA)>
+	<!ELEMENT contenu (#PCDATA | ref)*>
+	<!ELEMENT ref EMPTY>
+	
+	<!ATTLIST contenu	ref CDATA #IMPLIED>
+	<!ATTLIST ref	depeche IDREF #REQUIRED>
+	<!ATTLIST depeche	numero ID #REQUIRED
+						type CDATA #IMPLIED>
+]>
+<flux>
+	<depeche numero="d1" type="Sport">
+		<titre>Nantes éliminé</titre>
+		<date>2008-09-24</date>
+		<contenu ref="oui">
+			Nantes a été éliminée en Coupe de la Ligue
+			<ref depeche="d2" />
+			hier par l'équipe de Créteil ...
+		</contenu>
+	</depeche>
+	<depeche numero="d2" type="Sport">
+		<titre>Coupe de la Ligue</titre>
+		<soustitre>Résultats complets</soustitre>
+		<date>2008-09-24</date>
+		<contenu>
+			Créteil vs Nantes : 1-0 ...
+		</contenu>
+	</depeche>
+</flux>

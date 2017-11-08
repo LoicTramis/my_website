@@ -1,0 +1,103 @@
+.client-card {
+	border: 2px solid #ededed;
+	border-radius: 3px;
+	width: 60%;
+	background: rgba(255, 255, 255, 0.2);
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+}
+/* --- THE BROWSER --- */
+.browser {
+	display: block;
+}
+.chrome {
+	width: 48px;
+	height: 48px;
+	background-image: url("../img/browser/Chrome_48px.png");
+}
+.firefox {
+	width: 48px;
+	height: 48px;
+	background-image: url("../img/browser/Firefox_48px.png");
+}
+.ie {
+	width: 48px;
+	height: 48px;
+	background-image: url("../img/browser/Internet_Explorer_48px.png");
+}
+.edge {
+	width: 48px;
+	height: 48px;
+	background-image: url("../img/browser/Microsoft Edge_48px.png");
+}
+.netscape {
+	width: 48px;
+	height: 48px;
+	background-image: url("../img/browser/Netscape_48px.png");
+}
+.default {
+	width: 48px;
+	height: 48px;
+	background-image: url("../img/browser/Open_in_Browser_48px.png");
+}
+.opera {
+	width: 48px;
+	height: 48px;
+	background-image: url("../img/browser/Opera_48px.png");
+}
+.safari {
+	width: 48px;
+	height: 48px;
+	background-image: url("../img/browser/Safari_48px.png");
+}
+
+/* --- THE OS --- */
+.os {
+	
+}
+.android {
+	width: 48px;
+	height: 48px;
+	background-image: url("../img/os/Android_OS_48px.png");
+}
+.macos {
+	width: 48px;
+	height: 48px;
+	background-image: url("../img/os/Apple_48px.png");
+}
+.blackberry {
+	width: 48px;
+	height: 48px;
+	background-image: url("../img/os/BlackBerry_World_48px.png");
+}
+.ios {
+	width: 48px;
+	height: 48px;
+	background-image: url("../img/os/iOS_Logo_48px.png");
+}
+.linux {
+	width: 48px;
+	height: 48px;
+	background-image: url("../img/os/Linux_48px.png");
+}
+.mobile {
+	width: 48px;
+	height: 48px;
+	background-image: url("../img/os/Mobile_48px.png");
+}
+.ubuntu {
+	width: 48px;
+	height: 48px;
+	background-image: url("../img/os/Ubuntu_48px.png");
+}
+.windows-new {
+	width: 48px;
+	height: 48px;
+	background-image: url("../img/os/Windows8_48px.png");
+}
+.windows-old {
+	width: 48px;
+	height: 48px;
+	background-image: url("../img/os/WindowsXP_48px.png");
+}

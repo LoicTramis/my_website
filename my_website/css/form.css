@@ -1,0 +1,687 @@
+form {
+	height: 100%;
+}
+fieldset {
+	border: solid 3px; /* COLOR */
+	border-radius: 6px;
+	margin-bottom: 5px;
+	height: 100%;
+}
+fieldset.l3form {
+	 border-color: #53c653;
+}
+legend {
+	background-color: #e7d1fa;
+	border: 1px solid gray;	 
+	border-radius: 3px;
+	padding: 3px 5px;
+}
+.l3form > legend {
+	background-color: #b3e6b3;	
+}
+label {
+	font-weight: bold;
+	font-size: 11pt;
+}
+select {
+	background-color: #eee;
+	border: none;
+	font-family: Comfortaa;
+	font-size: 12pt;
+	padding: 14px 0px;
+	margin: 5px 0px;
+	text-align: center;
+}
+option, optgroup {
+	background-color: #efefef;
+	color: black;
+	font-family: Comfortaa;
+	font-size: 12pt;
+	text-align: center;
+}
+optgroup {
+	color: #b366ff;
+}
+input[type=text],
+input[type=password],
+input[type=email] {
+    border: 2px solid #ccc; /* COLOR */
+    box-sizing: border-box;
+	display: inline-block;
+	font-size: 11pt;
+ 	font-family: Comfortaa;
+ 	font-weight: bold; 
+	margin: 0 0 1% 0;
+	padding: 12px 8px;
+    outline: none;
+	width: 100%;
+}
+.radio-grid {
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+	vertical-align: top;
+	width: 49%;
+}
+.radio-grid input[type=radio] {
+	display: none;
+}
+.radio-grid label {
+	background-color: #e0e0eb; /* COLOR */
+	border-radius: 5px;
+	cursor: pointer;
+	display: block;
+	font-size: 16px;
+	margin: 5px 2px;
+	padding: 8px 0px;
+	text-align: center;
+}
+.radio-grid label:hover {
+	background-color: #e7d1fa;
+}
+.radio-grid input[type=radio]:checked+label {
+	background-color: #9933ff;
+	color: #eaeaea;
+}
+/* ----- DETAIL RESEARCH BUTTON ----- */
+.progress-container {
+	width: 100%;
+}
+.progress-bar {
+	counter-reset: step;
+}
+.progress-bar li {
+	color: #ddd; /* COLOR */
+	float: left;
+	list-style-type: none;
+	position: relative;
+	text-align: center;
+	width: 25%;
+}
+.progress-bar li:before {
+	background-color: white; /* COLOR */
+	border: 2px solid #ddd; /* COLOR */
+	border-radius: 50%;
+	content: counter(step);
+	counter-increment: step;
+	display: block;
+	font-size: 14pt;
+	height: 30px;
+	line-height: 30px;
+	margin: 0 auto 10px auto;
+	text-align: center;
+	width: 30px;
+}
+.progress-bar li:after {
+	background-color: #ddd; /* COLOR */
+	content: '';
+	height: 2px;
+	left: -50%;
+	position: absolute;
+	top: 15px;
+	width: 100%;
+	z-index: -1;
+}
+.progress-bar li:first-child:after {
+	content: none;
+}
+.progress-bar li.progress-active {
+	color: blue; /* COLOR */
+}
+.progress-bar li.progress-active:before {
+	border-color: blue; /* COLOR */
+}
+.progress-bar li.progress-completed {
+	color: green;
+}
+.progress-bar li.progress-completed:before {
+	background-color: #53c68c; /* COLOR */
+	border-color: green; /* COLOR */
+	color: white;
+	content: '\2713'; /* Check mark */ 
+}
+.progress-bar li.progress-completed + li:after {
+	background-color: green; /* COLOR */
+}
+/* ----- BUTTONS ----- */
+.button-research {
+	background-color: #f2f2f2;
+	display: inline-block;
+	position: relative;
+	width: 14%;
+}
+.button-research input[type=submit] {
+	cursor: pointer;
+	background-color: #f2f2f2;
+	font-size: 14pt;
+ 	font-family: Comfortaa;
+    border: 2px solid #ccc; /* COLOR */
+	padding: 12px 8px;
+	width: 100%;
+}
+.button-research input[type=submit]:hover {
+	border-color: #b366ff;
+}
+.button-research input[type=submit]:focus {
+	background-color: #b366ff;
+	border-color: #d966ff;
+	color: #f2f2f2;
+}
+
+.buttons {
+	bottom: 0;
+	position: absolute;
+	right: 10%;
+	width: 15%;
+}
+.button-disable-restart,
+.button-disable-previous,
+.button-disable-finish {
+	background-color: #d9d9d9; /* COLOR but probably won't change */
+	border-radius: 6px;
+	color: #666666; /* COLOR */
+	cursor: not-allowed;
+	display: inline-block;
+	height: 50px;
+	left: 50%;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	top: 50%;
+	width: 160px;
+	transform: translate(-50%, -50%);
+}
+.button-disable-restart:after,
+.button-disable-previous:after,
+.button-disable-finish:after {
+	content: '\f129';
+	font-family: "Ionicons";
+	font-size: 20px;
+	position: absolute;
+	left: calc(100px + 50%);
+	top: 50%;
+	transform: translate(-50%, -50%);
+	transition: ease .3s;
+}
+.button-disable-restart:hover:after,
+.button-disable-previous:hover:after,
+.button-disable-finish:hover:after {
+	left: 85%;
+	top: 50%;
+}
+.button-disable-restart	a,
+.button-disable-previous a,
+.button-disable-finish a {
+	color: #666666; /* COLOR but probably won't change */
+	display: block;
+	height: 100%;
+	line-height: 50px; /* Same as the div height */
+	pointer-events: none;
+	text-decoration: none;
+	user-select: none;
+	width: 100%;
+}
+.button-restart {
+	background: tomato; /* COLOR */
+	border-radius: 6px;
+	color: white; /* COLOR */
+	cursor: pointer;
+	display: inline-block;
+	height: 50px;
+	left: 50%;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	top: 50%;
+	width: 160px;
+	transform: translate(-50%, -50%);
+}
+.button-restart:after {
+	content: '\f3a8';
+	font-family: "Ionicons";
+	font-size: 30px;
+	left: 50%;
+	position: absolute;
+	left: calc(100px + 50%);
+	top: 50%;
+	transform: translate(-50%, -50%);;
+	transition: ease .3s;
+}
+.button-restart:hover:after {
+	left: 85%;
+	top: 50%;
+}
+.button-restart a {
+	display: block;
+	color: white;
+	height: 100%;
+	line-height: 50px; /* Same as the div height */
+	text-decoration: none;
+	width: 100%;
+}
+.button-previous {
+	background: orange; /* COLOR */
+	border-radius: 6px;
+	color: black; /* COLOR */
+	cursor: pointer;
+	display: inline-block;
+	height: 50px;
+	left: 50%;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	top: 50%;
+	width: 160px;
+	transform: translate(-50%, -50%);
+}
+.button-previous:after {
+	content: '\f108';
+	font-family: "Ionicons";
+	font-size: 30px;
+	left: 50%;
+	position: absolute;
+	left: calc(100px + 50%);
+	top: 50%;
+	transform: translate(-50%, -50%);;
+	transition: ease .3s;
+}
+.button-previous:hover:after {
+	left: 85%;
+	top: 50%;
+}
+.button-previous a {
+	color: black;
+	display: block;
+	height: 100%;
+	line-height: 50px; /* Same as the div height */
+	text-decoration: none;
+	width: 100%;
+}
+.button-submit {
+	background: green; /* COLOR */
+	border-radius: 6px;
+	color: white; /* COLOR */
+	cursor: pointer;
+	display: inline-block;
+	height: 50px;
+	left: 50%;
+	overflow: hidden;
+	position: relative;
+	top: 50%;
+	width: 160px;
+	transform: translate(-50%, -50%);
+}
+.button-submit:after {
+	content: '\f10b';
+	font-family: "Ionicons";
+	font-size: 30px;
+	left: 50%;
+	top: 50%;
+	position: absolute;
+	left: calc(100px + 50%);
+	transform: translate(-50%, -50%);
+	transition: ease .3s;
+}
+.button-submit:hover:after {
+	left: 85%;
+	top: 50%;
+}
+.button-submit input[type=submit] {
+	background-color: green;
+	border: none;
+	cursor: pointer;
+	color: white; /* COLOR */
+	display: block;
+	font-family: Comfortaa;
+	font-size: 12pt;
+	height: 100%;
+	line-height: 50px; /* Same as the div height */
+	text-align: center;
+	text-decoration: none;
+	width: 100%;
+}
+.button-finish {
+	background: green; /* COLOR */
+	border-radius: 6px;
+	color: white; /* COLOR */
+	cursor: pointer;
+	display: inline-block;
+	height: 50px;
+	left: 50%;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	top: 50%;
+	width: 160px;
+	transform: translate(-50%, -50%);
+}
+.button-finish:after {
+	content: '\f121';
+	font-family: "Ionicons";
+	font-size: 30px;
+	left: 50%;
+	top: 50%;
+	position: absolute;
+	left: calc(100px + 50%);
+	transform: translate(-50%, -50%);;
+	transition: ease .3s;
+}
+.button-finish:hover:after {
+	left: 85%;
+	top: 50%;
+}
+.button-finish input[type=submit] {
+	background: green; /* COLOR */
+	border: none;
+	border-radius: 6px;
+	color: white; /* COLOR */
+	cursor: pointer;
+	display: block;
+	font-family: Comfortaa;
+	font-size: 12pt;
+	height: 50px;
+	left: 50%;
+	line-height: 50px;
+	overflow: hidden;
+	position: relative;
+	top: 50%;
+	width: 160px;
+	text-align: center;
+	text-decoration: none;
+	transform: translate(-50%, -50%);
+}
+
+/*	---------------------- 
+	------- COOKIES ------ 
+	----------------------*/
+.save-button {
+	background-color: #cc5200; /* COLOR */
+	border: 2px solid #cc5200;
+	border-radius: 2px;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    text-align: center;
+	text-indent: 0;
+}
+.save-button a {
+	color: white; /* COLOR */
+	display: block;
+    font-size: 14pt;
+    font-variant: small-caps;
+    font-weight: bold;
+	padding: 5px 0px;
+	height: 100%;
+    text-decoration: none;
+    transition-duration: 0.4s;
+	vertical-align: middle;
+    width: 100%;
+}
+.save-button a:hover {
+	background-color: white; /* COLOR */
+	color: #cc5200;
+}
+.save-button i {
+	font-size: 20pt;
+	margin-right: 5px;
+	position: absolute;
+	left: 5px;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+.load-button {
+	background-color: #0073e6; /* COLOR */
+	border: 2px solid #0073e6;
+	border-radius: 2px;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    text-align: center;
+	text-indent: 0;
+}
+.load-button a {
+	color: white; /* COLOR */
+	display: block;
+    font-size: 14pt;
+    font-variant: small-caps;
+    font-weight: bold;
+	padding: 5px 0px;
+	height: 100%;
+    text-decoration: none;
+    transition-duration: 0.4s;
+	vertical-align: middle;
+    width: 100%;
+}
+.load-button a:hover {
+	background-color: white; /* COLOR */
+	color: #0073e6;
+}
+.load-button i {
+	font-size: 20pt;
+	margin-right: 5px;
+	position: absolute;
+	left: 5px;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+/*	---------------------- 
+	------- SESSION ------ 
+	----------------------*/	
+.signin,
+.signup {
+	left: 50%;
+	position: relative;
+	transform: translate(-50%);
+	width: 500px;
+}
+.signin label
+.signup label {
+	display: block;
+}
+
+.signin-button,
+.reset-button,
+.signout-button,
+.upload-button,
+.upload-button-bis,
+.phpinfo-button {
+	border-radius: 5px;
+	color: white; /* COLOR */
+	cursor: pointer;
+	display: inline-block;
+	height: 50px;
+	left: 50%;
+	position: relative;
+	text-align: center;
+	top: 50%;
+	transform: translate(-50%);
+}
+.signin-button {
+	width: 49%;
+	left: 25% !important;
+	margin-left: 1%;
+	background: green; /* COLOR */
+}
+.reset-button {
+	width: 49%;
+	left: 25% !important;
+	background: #a80b0b;
+}
+.signout-button {
+	background: red; /* COLOR */
+}
+.upload-button,
+.upload-button-bis {
+	background: #0073e6; /* COLOR */
+}
+.phpinfo-button {
+	background: #666699; /* COLOR */
+}
+.signin-button input[type=submit],
+.reset-button input[type=reset],
+.signout-button a,
+.upload-button a,
+.upload-button-bis input[type=submit],
+.phpinfo-button a {
+	border: 2px solid;
+	border-radius: 5px;
+	color: white; /* COLOR */
+	cursor: pointer;
+	display: block;
+	font-family: Comfortaa;
+	font-size: 12pt;
+	height: 50px;
+	left: 50%;
+	line-height: 50px;
+	overflow: hidden;
+	position: relative;
+	top: 50%;
+	width: 220px;
+	text-align: center;
+	text-decoration: none;
+	transform: translate(-50%, -50%);
+	transition: ease .3s;
+}
+.signin-button input[type=submit] {
+	background: green; /* COLOR */
+	border-color: green;
+	width: 100%;
+}
+.signin-button input[type=submit]:hover {
+	background: white; /* COLOR */
+	color: green; /* COLOR */
+}
+.signin-button:after {
+	content: '\f29e';
+	font-family: "Ionicons";
+	font-size: 22pt;
+	left: 10%;
+	top: 25%;
+	position: absolute;
+	transform: translate(-25%, -10%);
+	transition: ease .3s;
+}
+.signin-button:hover:after {
+	color: green;
+}
+.reset-button input[type=reset] {
+	background: #a80b0b; /* COLOR */
+	border-color: #a80b0b;
+	width: 100%;
+}
+.reset-button input[type=reset]:hover {
+	background: #a65959; /* COLOR */
+	border-color: #a65959;
+	color: #e9e2e2;
+}
+.reset-button:after {
+	content: '\f36e';
+	font-family: "Ionicons";
+	font-size: 22pt;
+	left: 10%;
+	top: 25%;
+	position: absolute;
+	transform: translate(-25%, -10%);
+	transition: ease .3s;
+}
+.reset-button:hover:after {
+	color: #e9e2e2;
+}
+.upload-button-bis:after {
+	content: '\f2c0';
+	font-family: "Ionicons";
+	font-size: 22pt;
+	left: 10%;
+	top: 25%;
+	position: absolute;
+	transform: translate(-25%, -10%);
+	transition: ease .3s;
+}
+.upload-button-bis:hover {
+	background: white; /* COLOR */
+	color: #0073e6; /* COLOR */	
+}
+.upload-button-bis:hover {
+	background: white; /* COLOR */
+	color: #0073e6; /* COLOR */	
+}
+.signout-button a {
+	background: red; /* COLOR */
+	border-color: red;
+}
+.signout-button i,
+.upload-button i,
+.phpinfo-button i {
+	position: absolute;
+	left: 5%;
+	font-size: 22pt;
+}
+.upload-button a,
+.upload-button-bis input[type=submit] {
+	background: #0073e6; /* COLOR */
+	border-color: #0073e6;
+}
+.phpinfo-button a {
+	background: #666699; /* COLOR */
+	border-color: #666699;
+}
+.signout-button a:hover {
+	background: white; /* COLOR */
+	color: red; /* COLOR */	
+}
+.upload-button a:hover,
+.upload-button-bis input[type=submit]:hover {
+	background: white; /* COLOR */
+	color: #0073e6; /* COLOR */	
+}
+.phpinfo-button a:hover {
+	background: white; /* COLOR */
+	color: #666699; /* COLOR */		
+}
+
+/*	-------------------
+	------ GRAPH ------
+	------------------- */
+.sort-button {
+	background-color: #60606c; /* COLOR */
+	border-radius: 5px;
+	color: white; /* COLOR */
+	cursor: pointer;
+	display: inline-block;
+	height: 50px;
+	margin-top: 25px;
+	position: relative;
+	float: right;
+	text-align: center;
+}
+.sort-button a {
+	border: 2px solid #60606c; /* COLOR */
+	border-radius: 5px;
+	color: white; /* COLOR */
+	cursor: pointer;
+	display: block;
+	font-family: Comfortaa;
+	font-size: 12pt;
+	height: 50px;
+	left: 50%;
+	line-height: 50px;
+	overflow: hidden;
+	position: relative;
+	top: 50%;
+	width: 320px;
+	text-align: center;
+	text-decoration: none;
+	transition: ease .3s;
+	transform: translate(-50%, -50%);
+}
+.sort-button a:hover {
+	background-color: white;
+	color: #60606c;
+}
+.sort-button i {
+	font-size: 18pt;
+	position: absolute;
+	left: 10px;
+	top: 50%;
+	transform: translate(0, -50%);
+}

@@ -1,0 +1,110 @@
+<svg width="2012.4" height="312">
+				<line	x1="248" y1="0" 
+						x2="248" y2="290"
+						style="stroke:rgb(0,0,0);stroke-width:2" />
+
+				<line	x1="248" y1="290"
+						x2="1981.4" y2="290"
+						style="stroke:rgb(0,0,0);stroke-width:2" />
+
+				<text text-anchor="middle" x="1006.2" y="308" fill="">Teneur en vitamine C (mg/100g)</text>
+	<text text-anchor="end" x="242" y="20" fill="black">Acérola</text>
+					<text text-anchor="begin" x="1935" y="20" fill="black">1677</text>
+					
+					<rect x="254" y="4" rx="1" ry="1"
+						width="1677"
+						height="20"
+						style="fill: #ffb31a;
+								stroke: #e60000;
+								stroke-width: 2"/>
+	<text text-anchor="end" x="242" y="46" fill="black">Baie d'argousier</text>
+					<text text-anchor="begin" x="953" y="46" fill="black">695</text>
+					
+					<rect x="254" y="30" rx="1" ry="1"
+						width="695"
+						height="20"
+						style="fill: #dddddd;
+								stroke: #dddddd;
+								stroke-width: 2"/>
+	<text text-anchor="end" x="242" y="72" fill="black">Goyave</text>
+					<text text-anchor="begin" x="486" y="72" fill="black">228</text>
+					
+					<rect x="254" y="56" rx="1" ry="1"
+						width="228"
+						height="20"
+						style="fill: #ff99cc;
+								stroke: #8dd775;
+								stroke-width: 2"/>
+	<text text-anchor="end" x="242" y="98" fill="black">Persil</text>
+					<text text-anchor="begin" x="388" y="98" fill="black">130</text>
+					
+					<rect x="254" y="82" rx="1" ry="1"
+						width="130"
+						height="20"
+						style="fill: #009933;
+								stroke: #009933;
+								stroke-width: 2"/>
+	<text text-anchor="end" x="242" y="124" fill="black">Fraise</text>
+					<text text-anchor="begin" x="325" y="124" fill="black">67</text>
+					
+					<rect x="254" y="108" rx="1" ry="1"
+						width="67"
+						height="20"
+						style="fill: #ffcccc;
+								stroke: #ff3333;
+								stroke-width: 2"/>
+	<text text-anchor="end" x="242" y="150" fill="black">Kiwi</text>
+					<text text-anchor="begin" x="317" y="150" fill="black">59</text>
+					
+					<rect x="254" y="134" rx="1" ry="1"
+						width="59"
+						height="20"
+						style="fill: #59cc33;
+								stroke: #c68039;
+								stroke-width: 2"/>
+	<text text-anchor="end" x="242" y="176" fill="black">Citron (jaune)</text>
+					<text text-anchor="begin" x="311" y="176" fill="black">53</text>
+					
+					<rect x="254" y="160" rx="1" ry="1"
+						width="53"
+						height="20"
+						style="fill: #ffff99;
+								stroke: #f9f906;
+								stroke-width: 2"/>
+	<text text-anchor="end" x="242" y="202" fill="black">Orange</text>
+					<text text-anchor="begin" x="298" y="202" fill="black">40</text>
+					
+					<rect x="254" y="186" rx="1" ry="1"
+						width="40"
+						height="20"
+						style="fill: #ff9900;
+								stroke: #ff8000;
+								stroke-width: 2"/>
+	<text text-anchor="end" x="242" y="228" fill="black">Citron (vert)</text>
+					<text text-anchor="begin" x="288" y="228" fill="black">30</text>
+					
+					<rect x="254" y="212" rx="1" ry="1"
+						width="30"
+						height="20"
+						style="fill: #8cf91f;
+								stroke: #66cc00;
+								stroke-width: 2"/>
+	<text text-anchor="end" x="242" y="254" fill="black">Pomme de terre cuite (au four)</text>
+					<text text-anchor="begin" x="271" y="254" fill="black">13</text>
+					
+					<rect x="254" y="238" rx="1" ry="1"
+						width="13"
+						height="20"
+						style="fill: #eec72b;
+								stroke: #ee8c2b;
+								stroke-width: 2"/>
+	<text text-anchor="end" x="242" y="280" fill="black">Pomme de terre cuite (à l'eau)</text>
+					<text text-anchor="begin" x="266" y="280" fill="black">8</text>
+					
+					<rect x="254" y="264" rx="1" ry="1"
+						width="8"
+						height="20"
+						style="fill: #eec72b;
+								stroke: #eec72b;
+								stroke-width: 2"/>
+</svg>

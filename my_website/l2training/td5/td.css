@@ -1,0 +1,39 @@
+.loop li {
+	font-family: Comfortaa, "Gill sans MT", sans-serif;
+	text-align: center;
+	word-spacing: 5px;
+	margin-bottom: 3px;
+}
+
+.times th{
+	text-align: center;
+	border: 1px black solid;
+	background-color: #6ab8c8;
+}
+
+.times td{		
+	border: 1px black solid;
+}
+
+.content {
+	text-indent: 2em;	
+}
+
+.edit {
+	font-style: oblique;
+	font-size: 12pt;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+table {
+	margin-left: auto;
+	margin-right: auto;	
+	text-indent: 1em;
+}
+
+strong {
+	font-weight: bold;
+	font-size: larger;
+}

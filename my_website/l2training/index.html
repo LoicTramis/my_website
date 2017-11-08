@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Lo&iuml;c Tramis - UCP</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link href="style/style.css" rel="stylesheet" type="text/css">
+	<style type="text/css">		
+		h1 {
+			margin-top: 0; 
+			text-align: center;
+			font-size: 20pt;
+			font-family: Comfortaa, sans-serif;		
+		}
+		
+		h2, h3, h4 {
+			font-family: Comfortaa, sans-serif;
+			font-size: large;
+		}
+		a {
+			text-decoration: none;
+		}
+		
+		ul {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		li {
+			font-weight: bold;
+		}
+		em {
+			font-style: italic;
+			font-family: "Gill sans MT", sans-serif;
+		}	
+		strong {
+			font-weight: bold;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- l'en-tête -->
+	<header>
+		<h1> Lo&iuml;c TRAMIS - UCP</h1>
+	</header>
+	
+	<!-- Pour les liens de navigation (externe)-->
+	<nav id="backtotop">
+		<ul style="background-color: #3A3A3A; height: 46px;">
+			<li>
+				<figure style="padding: 0px; margin: 0px">
+					<a href="index.html" title="Accueil" style="padding: 0px; margin: 0px;">
+						<img src="img/homeicon.png" alt="home" style="width: 46px;">
+					</a>
+					<figcaption class="hidden">Home</figcaption>
+				</figure>
+			</li>				
+			<li><a href="td5/td5.php" title="Introduction au PHP">TD 5</a></li>		
+			<li><a href="td6/td6.php" title="Plus de couleur">TD 6</a></li>					
+			<li><a href="td7to12/td7.php" title="Fonctions">TD 7</a></li>		
+			<li><a href="td7to12/td8.php" title="Calendrier">TD 8</a></li>
+			<li><a href="td7to12/td9.php" title="Formulaire">TD 9</a></li>		
+			<li><a href="td7to12/td10.php" title="Fichiers">TD 10</a></li>					
+			<li><a href="td7to12/td11.php" title="Cookie/Session">TD 11</a></li>		
+			<li><a href="td7to12/td12.php" title="Images PHP">TD 12</a></li>
+		</ul>
+	</nav>
+	
+	<!-- la section principale -->
+	<section>
+		<h2 style=" font-size: xx-large;">Bienvenue</h2>
+		
+		<article>
+			<h3>Mon site</h3>						
+			<p>Ce site web regroupe tous les travaux dirigés du module Développement Web.</p>
+			<p>Au semestre 4, l'UE Développement Web est coefficient 6 tout comme l'UE Séries.</p>
+			<p>Ce module introduit le langage <strong>HTML</strong> (XHTML1.0 strict &amp; HTML5), 
+			l'inséparable <strong>CSS</strong> (2 &amp; 3), et quelques notions de 
+			programmation web (<strong>PHP</strong>).</p>			
+		</article>
+		
+		<!-- les images -->
+		<article>
+		<h3>Les anciens travaux dirigés</h3>
+			<p>Les TD 1 &amp; 2 sont réalisés en <strong>XHTML</strong>, contrairement au reste qui est en <strong>HTML 5</strong>.
+			 De ce fait ils ne sont que partiellement
+			 intégrés au site et ne sont accessibles que depuis la page d'accueil.</p>
+			<p><em>Cliquez sur les images pour accéder au TD.</em></p>
+			<ul >
+				<li class="first">
+					<figure>
+						<a href="td1/index.html">
+							<img src="img/ironman.jpg" alt="TD 1" class="image"/>
+						</a>
+						<figcaption class="middle">
+							<a class="text" href="td1/index.html" >TD 1</a>
+							<a class="text" href="td1/index.html" >Le rapport de projet</a>
+						</figcaption>
+					</figure>
+				</li>	
+				<li class="first">			
+					<figure>
+						<a href="td2/index.html">
+							<img src="img/blackpanther.jpg" alt="TD 2" class="image"/>
+						</a>
+						<figcaption class="middle">
+							<a class="text" href="td2/index.html">TD 2</a>
+							<a class="text" href="td2/index.html">Promotion de l'équipe</a>
+						</figcaption>
+					</figure>
+				</li>							
+			</ul>			
+		</article>
+		
+		<article>
+			<h3>Les nouveaux travaux dirigés</h3>
+			<p>&Agrave; partir du 5<sup>&egrave;me</sup> TD, tous les TD seront intégrés au site accessible
+			depuis la barre de navigation situé <a class="link" href="#backtotop">ici</a>.</p>
+		</article>
+		
+		<article>
+			<h3>Informations PHP</h3>
+			<a href="td5/phpinfo.php" class="link">PHP info</a>		
+		</article>
+		
+	</section>
+	
+	<aside>
+		<figure>
+			<h3>Site de Saint-Martin</h3>
+			<p>2 avenue Adolphe-Chauvin</p>
+			<p>BP 222, Pontoise</p>
+			<p>95302 Cergy-Pontoise cedex</p>
+			<p>01 34 25 60 00</p>
+			<img src="img/saintmartin.jpg" alt="Site de saint martin" style="width: 200px; height: 120px;">
+			<figcaption>Entrée principale</figcaption>	
+		</figure>
+	</aside>
+	
+	<div class="main-home">
+		<figure>
+			<a href="../l2index/index.php">
+				<img src="../img/logo.svg" alt="MainHome">
+			</a>
+			<figcaption class="hidden">Accueil principale</figcaption>
+		</figure>
+	</div>
+	
+	<footer>
+		<ul>
+			<li>
+				<figure>
+					<a href="https://www.u-cergy.fr/" title="Site UCP" target="_blank"> 
+						<img src="img/ucpblanc.jpg" alt="UCP logo blanc" width="120" height="90">
+					</a>
+					<figcaption class="hidden">Logo UCP</figcaption>
+				</figure>
+			</li>		
+			<li>
+				<a href="http://www.u-cergy.fr/fr/ufr-sciences-et-techniques.html" target="_blank">UFR Sciences et Techniques</a>
+			</li>
+			<li>
+				<a href="http://upload.wikimedia.org/wikipedia/commons/0/0e/Cours_php.pdf" 
+				   title="Les bases du PHP"
+				   target="_blank">Notions de bases - PHP</a>
+			</li>
+			<li>
+				<a href="http://fr.wikipedia.org/wiki/Langage_de_programmation#Paradigmes" 
+				   title="Un peu de culture"
+				   target="_blank">Quelques infos sur les langages du Web</a>
+			</li>
+		</ul>			
+	</footer>
+	
+</body>
+
+</html>

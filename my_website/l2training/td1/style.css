@@ -1,0 +1,118 @@
+html {
+	background-color: gray;
+}
+
+body {
+	min-height:900px;
+	background-color: white;
+	border-style: groove;
+	border-color: rgb(150, 150, 150); /* dark gray */
+	margin-left: 25%; /* outside the body */
+	margin-right: 25%;
+	margin-top: 120px;
+	padding-left: 1%; /* inside the body */
+	padding-right: 1%;
+}
+
+.header {	
+	font-family: monospace;
+	background-color: #DDD;
+	position: absolute;
+	width: 100%;
+	min-width: 1000px;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding-top: 5px;
+}
+#title {
+	margin: 0 0 5px 0;
+	text-align: center;
+	font-size: 20pt;
+	font-family: Comfortaa, sans-serif;		
+
+}
+
+.nav {
+	position: absolute;
+	width: 100%;
+	min-width: 1000px;
+	top: 45px;
+	left: 0;
+	right: 0;
+	height: 40px;
+	padding-top: 0;
+}
+
+.nav ul {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+.nav ul li {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+}
+
+.nav ul li a {
+	display: block;
+	color: white;
+	text-align: center;
+	top: 40px;
+}
+
+nav ul li a:hover {
+	background-color: silver;
+	color: #0080c0;
+}
+
+a {
+	text-decoration: none;
+}
+		
+ul {
+	padding-left: 0;
+	padding-right: 0;
+}
+li {
+	font-family: sans-serif;
+	font-weight: bold;
+}
+/* main title */
+h1 {
+	color: rgb(100, 0, 150);
+	text-align: center;
+}
+
+/* title 1 */
+h2 {
+	color: white;
+	background-color: blue;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16pt;
+}
+
+/* title 2 */
+h3 {
+	color: blue;
+	text-indent: 2cm;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14pt;
+	padding-bottom: 2cm;
+}
+
+p {
+	text-indent: 2cm;
+	text-align: justify;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+	padding-bottom: 1pc;
+}
+
+img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}

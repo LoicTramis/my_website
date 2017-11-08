@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>Pb &amp; sol</title>
+</head>
+
+<body>
+	<!-- main title -->
+	<h1>Rapport de projet Informatique - Conception d'une application
+		d'agrégation de données</h1>
+		
+	<!-- title 1 -->
+	<h2>2) Problème de conception et idées de résolutions</h2>
+		
+	<!-- title 2 -->
+	<h3>a) Les interfaces/polymorphisme</h3>
+		
+	<!-- paragraph -->
+	<p>Pour ma part, un des problèmes de conception se trouve dans
+		l'implémentation des interfaces. En effet, les interfaces présentent
+		dans le programme ne sont pas utiles (un peu pour la javadoc).</p>
+
+	<p>Toutes les classes qui implémentent une interface doivent
+		posséder toutes les méthodes déclarées dans l'interface.</p>
+
+	<p>De ce fait, les classes qui ne possèdent pas les méthodes d'une
+		autre classe mais qui implémentent la même interface, doivent posséder
+		les mêmes méthodes.</p>
+
+	<p>Une solution possible est d'écrire dans chaque classe, la
+		totalité des méthodes présentes dans les classes qui implémentent la
+		même interface.</p>
+
+	<p>Par la suite, créer une interface contenant toutes les méthodes
+		de toutes les classes implémentées.</p>
+
+	<p>Enfin, Les méthodes qui sont inutilisables dans les classes,
+		renvoient null ou n'implémente aucun code.</p>
+
+	<p>Une telle solution pourrait permettre l'utilisation du
+		polymorphisme, afin de faciliter la programmation et les étapes de
+		test.</p>
+
+	<p>Ce problème se pose aussi pour une éventuelle classe abstraite
+		pour la classe « Country » afin d'utiliser un seul type Country dans
+		les ArrayList.</p>
+
+	<h3>b) ArrayList d'ArryLists</h3>
+
+	<p>De plus, certains pays n'ont aucun point de référence en commun
+		(par exemple le nom, le code ISO2 et ISO3 sont différents sur tous les
+		fichiers). Par conséquent, l'algorithme de recherche basique ne
+		fonctionne pas et ne trouve aucunes informations.</p>
+
+	<p>Une hypothétique solution serait de programmer une méthode de
+		comparaison à partir des 3 ou 4 premières lettres du pays par exemple.</p>
+
+	<p>Un dernier problème pour la route.</p>
+
+	<p>Le fait que le programme utilise plusieurs objets pour afficher
+		les informations (un objet pour le code ISO3, un objet pour la carte
+		de la région du pays, un objet pour le drapeau), empêche la sauvegarde
+		– et le chargement – sérialisable d'un seul et unique objet.</p>
+
+	<p>Une solution à ce dilemme est la création d'une autre classe
+		contenant aussi une ArrayList (ou une HashMap) qui contiendrait les
+		éléments de chaque « sous » ArrayList, afin d'obtenir un objet avec
+		toutes les informations relatives aux pays (i.e. le nom, le nom de la
+		région, la population, la carte de la région, le drapeau...).</p>
+
+	<!-- links for navigation -->
+	<p><a href="index.html">Accueil</a></p>
+	<p><a href="operation.html">Fonctionnement</a></p>
+	<p><a href="problem.html">Problèmes et solutions</a></p>
+	<p><a href="conclusion.html">Conclusion</a></p>
+</body>
+</html>

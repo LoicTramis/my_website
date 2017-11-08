@@ -1,0 +1,175 @@
+p {
+	text-align: justify;
+}
+
+strong {
+	font-weight: bold;	
+}
+
+
+.baseUp {
+	text-align: center;
+	letter-spacing: 1px;
+	max-height: 500px;
+	font-family: Nexa;
+	display: inline-block;
+	margin-left: 25%;
+	margin-right: 25%;
+	overflow-y: auto;
+}
+
+.baseDown {
+	text-align: center;
+	font-family: Nexa;
+	max-width: 700px;
+	display: block;
+	overflow-x: auto;
+}
+
+.borderless {
+	border: none;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.borderless td {
+	border-spacing: 10px;
+	margin-bottom: 0;
+}
+.date {
+	float: right;
+}
+.edit {
+	text-align: center;
+}
+
+p {
+	font-family: Nexa;
+	margin: 0;
+	padding: 0;
+}
+
+table, th, td {
+	border: none;
+	font-size: 18pt;
+}
+
+table {
+	font-family: Nexa;
+}
+tr {
+	margin-top: 10px;
+}
+td, th {
+	font-family: Nexa;	
+	text-align: center;
+	padding: 2px;
+	width: 60px;
+	height: 60px;
+}
+tr:hover {
+	background-color: transparent !important;
+	cursor: default;
+}
+output { 
+  position: absolute;
+  background-image: linear-gradient(#444444, #999999);
+  width: 40px; 
+  height: 30px; 
+  text-align: center; 
+  color: white; 
+  border-radius: 10px; 
+  display: inline-block; 
+  font: bold 15px/30px Georgia;
+  bottom: 175%;
+  left: 0;
+}
+output:after { 
+  content: "";
+  position: absolute; 
+  width: 0;
+  height: 0;
+  border-top: 10px solid #999999;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  margin-top: -1px;
+}
+.calendar, .calendar th, .calendar td{
+	border: none;
+	margin-top: 0px;
+}
+.lefttext, .righttext {
+	height: 100px;
+	width: 46%;
+	padding: 10px;
+	margin: 10px;
+}
+.lefttext {
+	float: left;
+}
+.righttext {
+	float: right;
+}
+.leftpart, .rightpart {
+	width: 50%;
+	height: 450px;
+	padding: 15px;
+	box-sizing: border-box;
+	display: inline-block;
+}
+.leftpart {
+	float: left;
+}
+.leftpart p {	
+	text-align: right;
+	box-sizing: border-box;
+}
+
+ /* On the calendar */
+.currentMonth {
+	font-family: Nexa;
+	font-weight: bold;
+}
+
+.titleMonth {
+	font-size: 60pt;
+	font-weight: bold;
+	height: 60px;
+}
+.titleYearName, .titleYearNumber, .subtitle {
+	height: 150px;	
+}
+.titleYearName {
+	font-size: 130pt;
+}
+.titleYearNumber {
+	font-size: 120pt;
+}
+.subtitle {
+	font-size: 54pt;
+	letter-spacing: 3px;
+}
+.yearbar {
+	position: relative;
+}
+.yearbar input[type=range] {
+	width: 100%;
+}
+.before {
+	color: black;
+	float: left;
+	font-family: Nexa;
+	font-size: 12pt;
+	font-weight: bold;
+	position: relative;
+}
+.after {
+	color: black;
+	float: right;
+	font-family: Nexa;
+	font-size: 12pt;
+	font-weight: bold;
+	position: relative;
+}

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xsd:schema xmlns:xsd="http://www.w3c.org/2001/XMLSchema">
+	<xsd:element name="gare" type="gareType"/>
+	
+	<xsd:key name="trainKey">
+		<xsd:selector xpath="train"/>
+		<xsd:field xpath="@numero"/>
+	</xsd:key>
+	
+	<xsd:key name="resaKey">
+		<xsd:selector xpath="train/voiture/resa"/>
+		<xsd:field xpath="@numero"/>
+	</xsd:key>
+	
+	<xsd:key name="usagerKey">
+		<xsd:selector xpath="usager"/>
+		<xsd:field xpath="@id"/>
+	</xsd:key>
+	
+	<!-- La clé étrangère -->
+	<xsd:keyref name="usagerKeyref" refer="usagerKey">
+		<xsd:selector xpath="train/voiture/resa"/>
+		<xsd:field xpath="@id"/>
+	</xsd:keyref>
+	
+	<xsd:complexType name="gareType">
+		<xsd:sequence>
+			<xsd:element name="train" type="trainType" maxOccurs="unbounded">
+				<xsd:key name="voitureKey">
+					<xsd:selector xpath="voiture"/>
+					<xsd:field xpath="@numero"/>
+				</xsd:key>
+			</xsd:element>
+			<xsd:element name="usager" type="usagerType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="trainType">
+		<xsd:sequence>
+			<xsd:element name="voiture" type="voitureType" maxOccurs="unbounded"/>
+			<xsd:element name="commentaire" type="commentaireType" minOccurs="0"/> <!-- maxOccurs = 1 par défaut -->
+		</xsd:sequence>
+		
+		<xsd:attribut name="numero" type="xsd:string" use="required"/>
+		<xsd:attribut name="type" type="xsd:string" use="optional"/>		
+	</xsd:complexType>
+	
+	<!-- J'ai un choix entre 2 (resa ou bar => choice) -->
+	<xsd:complexType name="voitureType">
+		<xsd:choice>
+			<xsd:element name="resa" type="resaType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="bar" type="barType"/>
+		</xsd:choice>
+		
+		<xsd:attribut name="numero" type="xsd:string" use="required"/>
+	</xsd:complexType>
+	
+	<!-- On se débarrasse du texte avec "mixed='true'" -->
+	<xsd:complexType name="commentaireType" mixed="true">
+		<xsd:sequence>
+			<xsd:element name="numero" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<!-- Pour resa il y a rien sauf les attributs-->
+	<xsd:complexType name="resaType">
+		<xsd:attribut name="numero" type="xsd:string" use="required"/>
+		<xsd:attribut name="id" type="xsd:string" use="required"/>
+	</xsd:complexType>
+</xsd:schema>
