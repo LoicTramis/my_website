@@ -1,19 +1,72 @@
 <?php
-$file_name = basename(__FILE__);
-$folder_name = basename(__DIR__);
-
-require_once '../include/header.inc.php';
+    $file_name = basename(__FILE__);
+    $folder_name = basename(__DIR__);
+    
+    require_once '../include/header.inc.php';
+    
+    /**
+     * Display an HTML table from a Oracle SQL query.
+     *
+     * @param string $select_query
+     * @return string - HTML table
+     */
+    function set_select_query($select_query) {
+        include '../include/postreg.conf.inc.php';
+        $connection = pg_connect("dbname=postreg");
+        
+        echo $connection;
+//         if ($connection) {
+//             $statement = oci_execute($statement);
+            
+//             // get the number of fields
+//             $nb_columns = oci_num_fields($statement);
+//             $result = "<table>\n
+//                             <tr>";
+            
+//             // headers
+//             for ($index = 1; $index <= $nb_columns; $index++) {
+//                 $result .= "<th>".oci_field_name($statement, $index)."</th>\n";
+//             }
+//             $result .= " </tr>\n";
+            
+//             // display every row
+//             while ($row = oci_fetch_array($statement)) {
+//                 $result .= "<tr>\n";
+                
+//                 // display every item
+//                 for ($index = 0; $index < $nb_columns; $index++) {
+//                     $result .= "<td>".$row[$index]."</td>\n";
+//                 }
+//                 $result .= "</tr>\n";
+//             }
+//             $result .= "</table>\n";
+            
+//             oci_free_statement($statement);
+//             oci_close($connection);
+//         } else {
+//             $result = "Connexion &agrave; la base de donn&eacute;es impossible.";
+//         }
+//         return $result;
+}
 ?>
-<section>
-	<h3>PostregSQL</h3>
-	
-	<article>
-		<h3>Incoming</h3>
+<div class="center">
+    <section style="left: 0%;
+                    transform: none;
+                    width: 85%;">
+    	<h2>PostregSQL</h2>
+    	
+    	<article>
+    		<h3>Incoming</h3>
+    		<?php 
+    		  set_select_query('SELECT * FROM Ucs');
+    		?>
+    	</article>
+	</section>
 
-	</article>
-</section>
-
+	<?php
+        require_once '../include/l3aside.inc.php';
+    ?>
+     </div>
 <?php
-    require_once '../include/l3aside.inc.php';
     require_once '../include/footer.inc.php';
 ?>

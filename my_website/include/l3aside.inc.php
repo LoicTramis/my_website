@@ -1,8 +1,8 @@
 <aside class="l3" id="dynaside">
 	<h4>Base de donn&eacute;es</h4>
 	<ul>
-		<li><a href="../l3database/td_php_oracle.php">Oracle</a></li>
-		<li><a href="../l3database/td_php_postreg.php">PostregSQL</a></li>
+		<li><a href="../l3database/oracle.php">Oracle</a></li>
+		<li><a href="../l3database/postreg.php">PostregSQL</a></li>
 	</ul>
 	
 	<h4>Dev web avanc&eacute;</h4>
