@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name="flux" type="fluxType" />
+	
+	<xsd:key name="depecheKey">
+		<xsd:selector xpath="depeche" />
+		<xsd:field xpath="@numero" />
+	</xsd:key>
+	
+	<xsd:keyref name="depecheKeyRef" refer="depecheKey">
+		<xsd:selector xpath="depeche/titre/contenu/ref" />
+		<xsd:field xpath="@depeche" />
+	</xsd:keyref>
+	
+	<xsd:complexType name="fluxType">
+		<xsd:sequence>
+			<xsd:element name="depeche" type="depecheType" maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="depecheType">
+		<xsd:sequence>
+			<xsd:element name="titre" type="xsd:string" />
+			<xsd:element name="soustitre" type="xsd:string" minOccurs="0" />
+			<xsd:element name="date" type="xsd:string" minOccurs="0" />
+			<xsd:element name="contenu" type="contenuType" maxOccurs="unbounded" />
+		</xsd:sequence>
+		
+		<xsd:attribute name="numero" type="xsd:string" use="required" />
+		<xsd:attribute name="type" type="xsd:string" use="optional" />
+	</xsd:complexType>
+	
+	<xsd:complexType name="contenyType">
+		<xsd:choice>
+			<xsd:element name="ref" type="refType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:choice>
+		
+		<xsd:attribute name="ref" type="xsd:string" use="optional"/>
+	</xsd:complexType>
+	
+	<xsd:complexType name="refType">
+		<xsd:attribute name="depeche" type="xsd:string" use="required"/>
+	</xsd:complexType>
+</xsd:schema>

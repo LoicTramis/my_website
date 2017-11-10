@@ -168,4 +168,38 @@
 		}
 	}
 	
+	function fetch_txt() {
+		var xhr = new XMLHttpRequest();
+
+		xhr.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				document.getElementById('department').innerHTML = this.responseText;
+			}
+		};
+		xhr.open('GET','../files/data.txt', true);
+		xhr.send(null);
+	}
+
+	function fetch_csv() {
+		var xhr = new XMLHttpRequest();
+
+		xhr.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				document.getElementById('department').innerHTML = this.responseText;
+			}
+		};
+		xhr.open('GET','../files/data.csv', true);
+		xhr.send(null);
+	}
 	
+	function fetch_xml() {
+		var xhr = new XMLHttpRequest();
+
+		xhr.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				document.getElementById('department').innerHTML = this.responseText;
+			}
+		};
+		xhr.open('GET','../files/data.xml', true);
+		xhr.send(null);
+	}

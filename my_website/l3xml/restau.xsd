@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name="carte" type="carteType" />
+	
+	<xsd:key name="platKey">
+		<xsd:selector xpath="plat" />
+		<xsd:field xpath="@ref" />
+	</xsd:key>
+	
+	<xsd:keyref name="platKeyRef" refer="platKey">
+		<xsd:selector xpath="menu/composant" />
+		<xsd:field xpath="@plat" />
+	</xsd:keyref>
+	
+	<xsd:complexType name="carteType">
+		<xsd:sequence>
+			<xsd:element name="plat" type="platType" maxOccurs="unbounded" />
+			<xsd:element name="menu" type="menuType" minOccurs="0" maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="platType">
+		<xsd:sequence>
+			<xsd:element name="nom" type="xsd:string" />
+			<xsd:element name="remarque" type="xsd:string" minOccurs="0" />
+			<xsd:element name="recette" type="recetteType" minOccurs="0" />
+		</xsd:sequence>
+		
+		<xsd:attribute name="ref" type="xsd:string" use="required" />
+		<xsd:attribute name="prix" type="xsd:string" use="required" />
+	</xsd:complexType>
+	
+	<xsd:complexType name="menuType">
+		<xsd:sequence>
+			<xsd:element name="prix" type="xsd:float" />
+			<xsd:element name="composant" type="composantType" maxOccurs="unbounded" />
+		</xsd:sequence>
+		
+		<xsd:attribute name="nom" type="xsd:string" use="required" />
+	</xsd:complexType>
+	
+	<xsd:complexType name="recetteType" mixed="true">
+		<xsd:sequence>
+			<xsd:element name="action" type="xsd:string"  minOccurs="0" maxOccurs="unbounded" />
+			<xsd:element name="ingredient" type="xsd:string"  minOccurs="0" maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="composantType">
+		<xsd:attribute name="plat" type="xsd:string" use="required" />
+	</xsd:complexType>
+</xsd:schema>

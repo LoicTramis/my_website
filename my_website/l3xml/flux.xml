@@ -13,7 +13,8 @@
 	<!ATTLIST depeche	numero ID #REQUIRED
 						type CDATA #IMPLIED>
 ]>
-<flux>
+<flux xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:noNamespaceSchemaLocation=".xsd">
 	<depeche numero="d1" type="Sport">
 		<titre>Nantes éliminé</titre>
 		<date>2008-09-24</date>

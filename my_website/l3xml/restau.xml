@@ -14,10 +14,11 @@
 	<!ATTLIST plat	ref ID #REQUIRED
 					prix CDATA #REQUIRED>
 	<!ATTLIST menu	nom CDATA #REQUIRED>
-	<!ATTLIST composant	plat IDREF #REQUIRED>
-	
+	<!ATTLIST composant	plat IDREF #REQUIRED>	
 ]>
-<carte>
+
+<carte	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:noNamespaceSchemaLocation="restau.xsd">
 	<plat ref="bb01" prix="9.45">
 		<nom>Boeuf bourguignon</nom>
 		<recette>

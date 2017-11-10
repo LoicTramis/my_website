@@ -12,41 +12,36 @@
      */
     function set_select_query($select_query) {
         include '../include/postreg.conf.inc.php';
-        $connection = pg_connect("dbname=postreg");
+        $connection = pg_connect("host=".$host." port=".$port." dbname=".$dbname." user=".$username." password=".$password);
+        $statement = pg_query($connection, $select_query);
         
-        echo $connection;
-//         if ($connection) {
-//             $statement = oci_execute($statement);
+        // get the number of fields
+        $nb_columns = pg_num_fields($statement);
+        $result = "<table>\n
+                        <tr>";
+        
+        // headers
+        for ($index = 1; $index <= $nb_columns; $index++) {
+            $result .= "<th>".pg_field_name($statement, $index)."</th>\n";
+        }
+        $result .= " </tr>\n";
+        
+        // display every row
+        while ($row = pg_fetch_array($statement)) {
+            $result .= "<tr>\n";
             
-//             // get the number of fields
-//             $nb_columns = oci_num_fields($statement);
-//             $result = "<table>\n
-//                             <tr>";
-            
-//             // headers
-//             for ($index = 1; $index <= $nb_columns; $index++) {
-//                 $result .= "<th>".oci_field_name($statement, $index)."</th>\n";
-//             }
-//             $result .= " </tr>\n";
-            
-//             // display every row
-//             while ($row = oci_fetch_array($statement)) {
-//                 $result .= "<tr>\n";
-                
-//                 // display every item
-//                 for ($index = 0; $index < $nb_columns; $index++) {
-//                     $result .= "<td>".$row[$index]."</td>\n";
-//                 }
-//                 $result .= "</tr>\n";
-//             }
-//             $result .= "</table>\n";
-            
-//             oci_free_statement($statement);
-//             oci_close($connection);
-//         } else {
-//             $result = "Connexion &agrave; la base de donn&eacute;es impossible.";
-//         }
-//         return $result;
+            // display every item
+            for ($index = 0; $index < $nb_columns; $index++) {
+                $result .= "<td>".$row[$index]."</td>\n";
+            }
+            $result .= "</tr>\n";
+        }
+        $result .= "</table>\n";
+        
+        pg_free_result($statement);
+        pg_close($connection);
+
+        return $result;
 }
 ?>
 <div class="center">

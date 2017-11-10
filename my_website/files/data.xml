@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<région>
+  <name>Ile-de-France</name>
+  <départements>
+	<dep>
+		<numéro>75</numéro>
+		<nom>Paris</nom>
+	</dep>
+	<dep>
+		<numéro>77</numéro>
+		<nom>Seine-et-Marne</nom>
+	</dep>
+	<dep>
+		<numéro>78</numéro>
+		<nom>Yvelines</nom>
+	</dep>
+	<dep>
+		<numéro>91</numéro>
+		<nom>Essonne</nom>
+	</dep>
+	<dep>
+		<numéro>92</numéro>
+		<nom>Hauts-de-Seine</nom>
+	</dep>
+	<dep>
+		<numéro>93</numéro>
+		<nom>Seine-Saint-Denis</nom>
+	</dep>
+	<dep>
+		<numéro>94</numéro>
+		<nom>Val-de-Marne</nom>
+	</dep>
+	<dep>
+		<numéro>95</numéro>
+		<nom>Val d'Oise</nom>
+	</dep>
+  </départements>
+</région>

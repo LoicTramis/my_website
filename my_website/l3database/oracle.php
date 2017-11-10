@@ -272,7 +272,7 @@ function set_2_fields_select($select_query) {
     	
     	<article>
     		<h3>Affichage complet</h3>
-    		<a href="./td_php_oracle.php">R&eacute;sultat ici</a>
+    		<a href="./oracle_tables.php">R&eacute;sultat ici</a>
     	</article>
     	
     	<article>

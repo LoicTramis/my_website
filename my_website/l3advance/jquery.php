@@ -8,7 +8,7 @@ require_once '../include/header.inc.php';
     <section style="left: 0%;
                     transform: none;
                     width: 85%;">
-    	<h2>PDO</h2>
+    	<h2>JQuery</h2>
     	
     	<article>
     		<h3>Work in progress</h3>
