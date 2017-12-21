@@ -25,6 +25,7 @@ function store_secure_data($lastname, $firstname, $username, $email, $password) 
 function is_connected($secure_file = SECURE_FILE) {
 	$data_file = fopen($secure_file, 'r');
 	$data = array();
+	$bool = false;
 	
 	if (isset($_POST['login']) && (!empty($_POST['login']) && !empty($_POST['password']))) {
 		$login = $_POST['login'];
@@ -39,11 +40,15 @@ function is_connected($secure_file = SECURE_FILE) {
 				$_SESSION['email'] = $data[3];
 				($_SESSION['login'] == "Entropy" ? $_SESSION['admin'] = TRUE : $_SESSION['admin'] = FALSE);
 				
-				return true;
+				$bool = true;
 			}
 		}
+	} else {
+	    $bool = false;
 	}
-	return false;
+	fclose($data_file);
+	
+	return $bool;
 }
 
 /**

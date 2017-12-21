@@ -16,7 +16,7 @@
         		<div style="margin-top: 50px; text-align: center; color: white;">
         			<p>D&eacute;veloppement Web Avanc&eacute;</p>
         			<a class="button-thirdyear" href="../l3advance/"><i class="fa fa-flask"></i>TD</a>
-        			<a class="button-thirdyear" href="#"><i class="fa fa-server"></i>Projet</a>
+        			<a class="button-thirdyear" href="../l3project/"><i class="fa fa-server"></i>Projet</a>
         		</div>
         	</article>
     	</section>
